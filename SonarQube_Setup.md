@@ -180,3 +180,26 @@ cd /opt/sonarqube/bin/linux-x86-64
 - For large-scale enterprise, monitor memory usage with tools and tune accordingly
 
 ---
+
+### In Case Of u lost admin password.
+
+```bash
+
+# Reset admin password
+
+curl -LO https://repo1.maven.org/maven2/com/h2database/h2/1.4.200/h2-1.4.200.jar
+
+/opt/java-17/bin/java -cp /tmp/h2-1.4.200.jar org.h2.tools.Shell   -url "jdbc:h2:tcp://127.0.0.1:9092/sonar"
+	
+update users set
+crypted_password='100000$t2h8AtNs1AlCHuLobDjHQTn9XppwTIx88UjqUm4s8RsfTuXQHSd/fpFexAnewwPsO6jGFQUv/24DnO55hY6Xew==',
+salt='k9x9eN127/3e/hf38iNiKwVfaVk=',
+hash_method='PBKDF2',
+reset_password='true',
+user_local='true',
+active='true'
+where login='admin';
+
+exit
+
+```
