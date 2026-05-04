@@ -107,7 +107,7 @@ Instead of updating user-specific profiles, we’ll set up a global script:
 
 # User Level (Exit as a Root User and Run as Regular/Normal User (Only It will work for current User)
 
-echo 'export M2_HOME=/opt/apache-maven-3.9.10' >> ~/.bash_profile
+echo 'export M2_HOME=/opt/apache-maven-3.9.15' >> ~/.bash_profile
 echo 'export PATH=$PATH:$M2_HOME/bin' >> ~/.bash_profile
 
 source ~/.bash_profile
