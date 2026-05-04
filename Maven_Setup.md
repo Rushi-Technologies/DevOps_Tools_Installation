@@ -92,9 +92,9 @@ yum install -y wget unzip
 ### ✅ Step 4: Download and Extract Maven
 
 ```bash
-wget https://dlcdn.apache.org/maven/maven-3/3.9.10/binaries/apache-maven-3.9.10-bin.zip
-unzip apache-maven-3.9.10-bin.zip
-rm apache-maven-3.9.10-bin.zip # Remove Once it's Unzipped.
+wget https://dlcdn.apache.org/maven/maven-3/3.9.15/binaries/apache-maven-3.9.15-bin.tar.gz
+tar -xvzf apache-maven-3.9.15-bin.tar.gz
+rm apache-maven-3.9.15-bin.tar.gz # Remove Once it's Unzipped.
 ```
 
 ---
